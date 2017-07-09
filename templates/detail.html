@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chair details</title>
+</head>
+<body>
+<h3>{{ chair.name }}</h3>
+{% for imageModel in images %}
+    <img src="{{ imageModel.image.url }}">
+{% endfor %}
+</body>
+</html>
+
+
