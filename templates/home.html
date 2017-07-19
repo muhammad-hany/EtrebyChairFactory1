@@ -25,18 +25,23 @@
                 <img class="thumbnail_image" src="{{ image_model.image.url }}">
                 <p class="photo_name">{{ image_model.chair.name }}</p>
                 <div class="navigation">
-                    <a href="#" class=" btn btn-default">Price request</a>
-                    <a href="{% url 'details' id=image_model.chair.id %}" class="btn btn-default">Details</a>
+                    <a href="#" class=" btn btn-default btn_small request">Price request</a>
+                    <a href="{% url 'details' id=image_model.chair.id %}" class="btn btn-default btn_small details">Details</a>
                 </div>
             </div>
         {% endfor %}
     </div>
-</div>
-
 
 <div class="footer">
-    <h5>contact us</h5>
+    <div class="buttons">
+            <a href="{% url 'index' %}" class="btn btn-default">Catalogue</a>
+            <a class="btn btn-default">Contact Us</a>
+        </div>
 </div>
+</div>
+
+
+
 
 
 </body>
