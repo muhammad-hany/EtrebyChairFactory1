@@ -4,7 +4,13 @@ from .models import Chair
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    thmub_nails = []
+    chairs = Chair.objects.all()
+    for chair in chairs:
+        thmub_nails.append(chair.chairimages_set.first())
+
+    context = {'chairs': chairs, 'thumb_nails': thmub_nails}
+    return render(request, 'home.html',context)
 
 def index(request):
 

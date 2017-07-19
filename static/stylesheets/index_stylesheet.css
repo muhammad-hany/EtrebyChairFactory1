@@ -1,0 +1,25 @@
+.floated_div{
+    float: left;
+    padding: 2em;
+    margin: 2%;
+}
+
+
+.thumbnail_image{
+    border: black 1px solid;
+    border-radius: 2em;
+    padding: 0.5em;
+}
+
+*{
+    border: black 1px solid;
+}
+
+
+.photo_name{
+    letter-spacing: 0.1em;
+    font-family:  Arimo,Arial,Helvetica,"Lucida Grande",sans-serif;
+    font-weight: bolder;
+    margin-top: 1em;
+    padding-left: 0.3em;
+}

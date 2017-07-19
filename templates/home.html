@@ -10,15 +10,26 @@
     <link href="{% static 'stylesheets/style_home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<div class="container">
-    <div class="content">
+<div class="main">
+    <div class="head">
         <img src="{% static 'images/logo2.png' %}" height="300" width="300">
         <h1>Etrby Chairs Factory</h1>
         <div class="buttons">
             <a href="{% url 'index' %}" class="btn btn-default">Catalogue</a>
             <a class="btn btn-default">Contact Us</a>
         </div>
+    </div>
+    <div class="gallery">
+        {% for image_model in thumb_nails %}
+            <div class="floated_div">
+                <img class="thumbnail_image" src="{{ image_model.image.url }}">
+                <p class="photo_name">{{ image_model.chair.name }}</p>
+                <div class="navigation">
+                    <a href="#" class=" btn btn-default">Price request</a>
+                    <a href="{% url 'details' id=image_model.chair.id %}" class="btn btn-default">Details</a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 
