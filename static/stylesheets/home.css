@@ -6,19 +6,18 @@
 }
 
 body {
-    /*background-attachment: fixed;*/
-    /*background-color: #1d5169;*/
     background: url("/static/images/wood.jpg") no-repeat top center fixed;
-    /*background-size:cover ;*/
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;*/
+
 }
 
 .head {
 
     width: 100%;
 
+}
+
+.btn.contact{
+    width: 200px;
 }
 
 .buttons {
@@ -64,9 +63,7 @@ h1, p {
     width: 200px;
 }
 
-* {
-    border: black 1px solid;
-}
+
 
 .photo_name {
     font-size: 1.5em;
@@ -94,21 +91,20 @@ h1, p {
 .btn.btn_small{
     padding: 0.3em;
     margin: 0.2em;
-    border: 0;
 }
-.btn_small.request{
-    background-color: #4569eb;
-}
+/*.btn_small.request{*/
+    /*background-color: #4569eb;*/
+/*}*/
 
-.btn_small.request:hover,.btn_small.request:focus{
-    background-color: #334ea1;
-}
-.btn.details{
-    background-color: #eb6a58;
-}
-.btn_small.details:hover,.btn_small.details:focus{
-    background-color: #a24d3e;
-}
+/*.btn_small.request:hover,.btn_small.request:focus{*/
+    /*background-color: #334ea1;*/
+/*}*/
+/*.btn.details{*/
+    /*background-color: #eb6a58;*/
+/*}*/
+/*.btn_small.details:hover,.btn_small.details:focus{*/
+    /*background-color: #a24d3e;*/
+/*}*/
 
 .navigation{
     padding: 0;

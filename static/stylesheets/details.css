@@ -1,0 +1,27 @@
+* {
+    /*border: 1px black solid;*/
+
+
+}
+
+
+.logo_svg {
+    width: 60px;
+    height: 60px;
+}
+
+.logo_name {
+    font-family: 'Raleway', sans-serif;
+    font-size: 200%;
+    font-weight: bolder;
+    color: #808284;
+}
+
+.navbar-brand{
+    margin: 10px;
+}
+
+.home_link{
+    width: inherit;
+    height: inherit;
+}

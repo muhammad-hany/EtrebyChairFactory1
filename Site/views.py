@@ -26,4 +26,4 @@ def details(request, id):
     chair=Chair.objects.get(pk=id)
     images=chair.chairimages_set.all()
     context={'chair':chair,'images':images}
-    return render(request,'detail.html',context)
+    return render(request, 'details.html', context)
