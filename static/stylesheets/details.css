@@ -1,27 +1,53 @@
 * {
     /*border: 1px black solid;*/
+    margin: 0;
+    padding:0;
 
 
+}
+.brand{
+    display: flex;
+    align-items: center;
+    margin: 5px;
 }
 
 
 .logo_svg {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+    /*border: 1px red solid;*/
 }
 
 .logo_name {
     font-family: 'Raleway', sans-serif;
-    font-size: 200%;
+    font-size: 30px;
     font-weight: bolder;
+    margin-bottom: 15px;
     color: #808284;
 }
 
-.navbar-brand{
-    margin: 10px;
+.navigation ul{
+    display: flex;
+    align-items: center;
+     list-style: none;
+     text-align: center;
+    justify-content: space-between;
+     padding: 0;
+     margin: 0;
+ }
+
+li.contact{
+    margin: 5px;
+    margin-right: 20px;
 }
 
-.home_link{
-    width: inherit;
-    height: inherit;
-}
+ .navigation a{
+     text-decoration: none;
+     color: #808284;
+     font-family: 'Raleway', sans-serif;
+     font-weight: bolder;
+     font-size: 20px;
+
+ }
+
+
