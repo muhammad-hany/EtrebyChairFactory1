@@ -3,49 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Chair details</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {% load static %}
     <link href="{% static 'stylesheets/details.css' %}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Lato|Kanit|Roboto" rel="stylesheet">
 </head>
 <body>
-{#<h3>{{ chair.name }}</h3>#}
-{#{% for imageModel in images %}#}
-{#    <img src="{{ imageModel.image.url }}">#}
-{#{% endfor %}#}
-
-{#<nav class="navbar navbar-default">#}
-{#    <div class="container-fluid">#}
-{#        <!-- Brand and toggle get grouped for better mobile display -->#}
-{#        <div class="navbar-header">#}
-{#            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"#}
-{#                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">#}
-{#                <span class="sr-only">Toggle navigation</span>#}
-{#                <span class="icon-bar"></span>#}
-{#                <span class="icon-bar"></span>#}
-{#                <span class="icon-bar"></span>#}
-{#            </button>#}
-{#            <div class="brand">#}
-{#                <img class="logo_svg" alt="Brand" src="{% static 'images/svgs/logo.svg' %}">#}
-{#                <h2 class="logo_name">Etrby Chairs Factory</h2>#}
-{#            </div>#}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
-{##}
-{#            <div class=" company_header">#}
-{#                <img class="logo_svg" src="{% static 'images/svgs/logo.svg' %}"/>#}
-{#                <a class="navbar-brand" href="{% url 'home' %}"><h2 class="logo_name">Etrby Chairs Factory</h2></a>#}
-{#            </div>#}
-{##}
-{#        </div>#}
-{#    </div>#}
-{#</nav>#}
-<nav class="navbar navbar-default">
+<nav class="nav-bar">
     <div class="navigation">
         <ul>
             <li>
@@ -55,12 +18,30 @@
                 </div>
             </li>
             <li class="contact">
-                <a href="#">Contact us</a>
+                <a href="#"><p>Contact us</p></a>
             </li>
         </ul>
-
     </div>
 </nav>
+
+<div id="gallery">
+    <div id="images_container">
+        <ul>
+            {% for image_model in images %}
+                <li><img src="{{ image_model.image.url }}"></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="chair_details">
+        <h2 id="chair_name">{{ chair.name }}</h2>
+        <p class="chair_info">Minimum order : xx</p>
+        <p class="chair_info">further information further information further information further information further information further information further information further information</p>
+        <a href="#" id="price_request"><p>Request Price</p></a>
+    </div>
+
+</div>
+
+
 </body>
 </html>
 
