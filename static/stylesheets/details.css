@@ -12,19 +12,24 @@
 }
 
 .logo_svg {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
     /*border: 1px red solid;*/
 }
 h2,p{
     font-family: 'Raleway', sans-serif;
 }
 
+#gallery{
+    margin: 10px;
+}
+
 .logo_name {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    color: #808284;
+    color: #5A0B4D;
     align-self: center;
 }
 
@@ -49,42 +54,51 @@ li.contact {
 
 .navigation a {
     text-decoration: none;
-    color: #808284;
+    color: #5A0B4D;
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
     font-size: 20px;
 }
 
 .nav-bar {
-    border-bottom: 1px #b3b1b7 solid;
+    border-bottom: 1px #5A0B4D solid;
     margin: 0 2px 0 2px;
 }
 
 #gallery{
     display: flex;
-    height: 500px;
+    align-items: flex-start;
+
 }
 
 #images_container{
     flex:2;
-    background-color: #333333;
+    /*background-color: #333333;*/
     display: flex;
     justify-content: center;
 
 }
 
 #chair_details{
-
+    max-width: 300px;
+    padding: 0;
     display: block;
     flex: 1;
-    background-color: #2aabd2;
+    /*background-color: #2aabd2;*/
+    border: 2px solid #5A0B4D;
+    border-radius:10px ;
+
 }
 
 #chair_name{
-    color: #25688c;
+    text-align: center;
+    background-color: #5A0B4D;
+    text-transform:uppercase ;
+    color: white;
     font-weight: 200;
     font-size: 25px;
-    margin:10px;
+    padding:10px;
+    border-radius: 8px 8px 0 0 ;
     letter-spacing: 2px;
 
 }
@@ -92,23 +106,29 @@ li.contact {
 .chair_info{
     font-family: 'Roboto', sans-serif;
     margin: 10px;
-    color: #2188a6;
+    color: #5A0B4D;
     font-weight: lighter;
     font-size:17px ;
+
 }
 #price_request{
 
     text-decoration: none;
-    color: #389ad0;
+    color: white;
 }
 
 #price_request p{
     /*border: #2188a6 solid 2px;*/
-    background-color: #25688c ;
+    background-color: #5A0B4D ;
     border-radius: 2px;
     margin: 50px 10px 10px 10px;
     padding: 10px;
     text-align: center;
+}
+
+#details_image{
+    height: 500px;
+    width: auto;
 }
 
 

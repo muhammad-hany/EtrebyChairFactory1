@@ -28,7 +28,7 @@
     <div id="images_container">
         <ul>
             {% for image_model in images %}
-                <li><img src="{{ image_model.image.url }}"></li>
+                <li><img id="details_image" src="{{ image_model.image.url }}"></li>
             {% endfor %}
         </ul>
     </div>
