@@ -19,12 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '10%h&m45)^@4r4r-o#6#$1h48*e6lg5+oz+e=r&zuk@p600gv$'
+# SECRET_KEY = '10%h&m45)^@4r4r-o#6#$1h48*e6lg5+oz+e=r&zuk@p600gv$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['etrby.herokuapp.com']
 
 # Application definition
 
@@ -50,6 +50,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'EtrebyChairFactory.urls'
+
+
+
 
 TEMPLATES = [
     {
@@ -79,6 +82,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+db_from_env=dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE']=500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -122,3 +130,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+SECRET_KEY=os.environ.get('SECRET_KEY','10%h&m45)^@4r4r-o#6#$1h48*e6lg5+oz+e=r&zuk@p600gv$')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+
