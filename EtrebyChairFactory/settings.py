@@ -47,14 +47,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-MIDDLEWARE_CLASSES=('whitenoise.middleware.WhiteNoiseMiddleware',)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'EtrebyChairFactory.urls'
-
-
-
 
 TEMPLATES = [
     {
@@ -86,9 +83,10 @@ DATABASES = {
 }
 
 import dj_database_url
-db_from_env=dj_database_url.config()
+
+db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE']=500
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -133,6 +131,5 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SECRET_KEY=os.environ['SECRET_KEY']
-EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
-
+SECRET_KEY = os.environ['SECRET_KEY']
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
