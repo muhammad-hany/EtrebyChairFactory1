@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django_cleanup',
 ]
 
-MIDDLEWARE_CLASSES = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-]
+# MIDDLEWARE_CLASSES = [
+#     'whitenoise.middleware.WhiteNoiseMiddleware',
+# ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
