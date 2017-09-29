@@ -139,8 +139,10 @@ STATICFILES_DIRS=[
 ]
 STATIC_URL = 'https://%s/%s/' %(AWS_S3_CUSTOM_DOMAIN,AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
-MEDIA_ROOT = MEDIA_URL
+DEFAULT_FILE_STORAGE='EtrebyChairFactory.storage_backends.MediaStorage'
+
+# MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
+# MEDIA_ROOT = MEDIA_URL
 
 # AWS_FILE_EXPIRE = 200
 # AWS_PRELOAD_METADATA = True
