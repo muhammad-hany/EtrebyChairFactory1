@@ -4,9 +4,8 @@ from django.db import models
 class Chair(models.Model):
     name = models.CharField(max_length=50)
     date = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=600)
-    price=models.IntegerField()
-    min_order=models.IntegerField()
+    description = models.CharField(max_length=500)
+
 
 
     def __str__(self):
