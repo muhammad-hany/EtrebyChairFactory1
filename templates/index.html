@@ -11,10 +11,11 @@
 <body>
 {% for image_model in thumb_nails %}
     <div class="floated_div">
-        <img class="thumbnail_image" src="{{ image_model.image.url }}">
+        <a href="{% url 'details' id=image_model.chair.id %}">
+            <img class="thumbnail_image" src="{{ image_model.image.url }}">
+        </a>
         <p class="photo_name">{{ image_model.chair.name }}</p>
     <div class="navigation">
-        <a href="#" class=" btn btn-default">Price request</a>
         <a href="{% url 'details' id=image_model.chair.id %}" class="btn btn-default">Details</a>
     </div>
     </div>
