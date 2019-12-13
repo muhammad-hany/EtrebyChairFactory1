@@ -34,9 +34,9 @@
     </div>
     <div id="chair_details">
         <h2 id="chair_name">{{ chair.name }}</h2>
-        <p class="chair_info">Minimum order : xx</p>
-        <p class="chair_info">{{ chair.description}}</p>
-        <a href="#" id="price_request"><p>Request Price</p></a>
+        <p class="chair_info">Minimum order : {{ chair.min_order }}</p>
+        <p class="chair_info">{{ chair.description }}</p>
+        <p id="price_request">{{ chair.price }}</p>
     </div>
 
 </div>
