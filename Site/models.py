@@ -5,12 +5,12 @@ class Chair(models.Model):
     name = models.CharField(max_length=50, blank=False)
     date = models.DateTimeField(auto_now_add=True, blank=False)
     description = models.TextField(max_length=800, blank=False)
-    price = models.CharField(max_length=50, blank=False)
-    fcl = models.CharField(max_length=50, blank=False)
-    height = models.CharField(max_length=50, blank=False)
-    seat_height = models.CharField(max_length=50, blank=False)
-    width = models.CharField(max_length=50, blank=False)
-    depth = models.CharField(max_length=50, blank=False)
+    price = models.CharField(max_length=50, blank=False, default="price")
+    fcl = models.CharField(max_length=50, blank=False, default="fcl")
+    height = models.CharField(max_length=50, blank=False, default="height")
+    seat_height = models.CharField(max_length=50, blank=False, default="seat height")
+    width = models.CharField(max_length=50, blank=False, default="width")
+    depth = models.CharField(max_length=50, blank=False, default="depth")
 
     def __str__(self):
         return self.name
