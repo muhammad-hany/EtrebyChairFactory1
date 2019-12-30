@@ -91,39 +91,44 @@ li.contact {
 }
 
 #chair_name{
+
+    font-weight: bold;
     text-align: center;
-    background-color: #5A0B4D;
     text-transform:uppercase ;
-    color: white;
-    font-weight: 200;
+    color: #5A0B4D;
     font-size: 25px;
     padding:10px;
-    border-radius: 8px 8px 0 0 ;
     letter-spacing: 2px;
 
 }
 
 .chair_info{
     font-family: 'Roboto', sans-serif;
-    margin: 10px;
     color: #5A0B4D;
     font-weight: lighter;
     font-size:17px ;
-
-}
-#price_request{
-
-    text-decoration: none;
-    color: white;
-}
-
-#price_request p{
-    /*border: #2188a6 solid 2px;*/
-    background-color: #5A0B4D ;
-    border-radius: 2px;
-    margin: 50px 10px 10px 10px;
     padding: 10px;
+
+}
+.minimum_order{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #5A0B4D;
+    font-weight: lighter;
+    font-size:17px ;
+}
+
+.price{
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    background-color: #5A0B4D;
+    font-size:17px ;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
     text-align: center;
+
 }
 
 #details_image{

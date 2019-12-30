@@ -12,7 +12,7 @@
     <div class="head">
         <div id="logo_div">
             <img id="logo" src="{% static 'images/svgs/logo.svg' %}">
-        <h1>Etrby Chairs Factory</h1>
+            <h1>Etrby Chairs Factory</h1>
         </div>
 
         <div class="buttons">
@@ -24,11 +24,10 @@
             <div class="floated_div">
                 <a href="{% url 'details' id=image_model.chair.id %}">
                     <img class="thumbnail_image" src="{{ image_model.image.url }}">
+                    <p class="photo_name">{{ image_model.chair.name }}</p>
+                    <p class="price_tag">{{ image_model.chair.price }} USD</p>
                 </a>
-                <p class="photo_name">{{ image_model.chair.name }}</p>
-                <!-- <div class="navigation">
-                    <a href="{% url 'details' id=image_model.chair.id %}" class="btn btn-default btn_small details">Details</a>
-                </div> -->
+
             </div>
         {% endfor %}
     </div>

@@ -25,6 +25,12 @@
 </nav>
 
 <div id="gallery">
+    <div id="chair_details">
+        <h2 id="chair_name">{{ chair.name }}</h2>
+        <p class="minimum_order"><strong>Minimum order :</strong> {{ chair.fcl }} for 20" container</p>
+        <p class="chair_info"><strong>Description : </strong>{{ chair.description }}</p>
+        <p class="price">{{ chair.price }} USD</p>
+    </div>
     <div id="images_container">
         <ul>
             {% for image_model in images %}
@@ -32,12 +38,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div id="chair_details">
-        <h2 id="chair_name">{{ chair.name }}</h2>
-        <p class="chair_info">Minimum order : {{ chair.min_order }}</p>
-        <p class="chair_info">{{ chair.description }}</p>
-        <p id="price_request">{{ chair.price }}</p>
-    </div>
+
 
 </div>
 

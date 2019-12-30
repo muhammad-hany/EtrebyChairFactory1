@@ -6,6 +6,7 @@
 
 
 .thumbnail_image{
+    background-color: #2aabd2;
     border: black 1px solid;
     border-radius: 2em;
     padding: 0.5em;
